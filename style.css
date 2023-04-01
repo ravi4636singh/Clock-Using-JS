@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Golos Text", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #3a4452;
+}
+
+.heading {
+  font-size: 4.5rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  color: white;
+  text-align: center;
+  margin-top: 5.5rem;
+}
+
+.container {
+  height: calc(100vh - 144px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.2rem;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+}
+.container .time {
+  width: 10rem;
+  height: 10rem;
+  background-color: #33ffd8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container span {
+  font-size: 4rem;
+  margin: 0 1rem;
+  color: white;
+}
+.container .hours::before {
+  position: absolute;
+  content: "Hours";
+  font-size: 2rem;
+  color: white;
+  top: -21%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .minutes::before {
+  position: absolute;
+  content: "Minutes";
+  font-size: 2rem;
+  color: white;
+  top: -21%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .seconds::before {
+  position: absolute;
+  content: "Seconds";
+  font-size: 2rem;
+  color: white;
+  top: -21%;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=style.css.map */

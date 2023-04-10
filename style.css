@@ -10,67 +10,142 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  background-color: #3a4452;
-}
-
-.heading {
-  font-size: 4.5rem;
-  font-weight: 500;
-  letter-spacing: 0.25rem;
-  color: white;
-  text-align: center;
-  margin-top: 5.5rem;
-}
-
 .container {
-  height: calc(100vh - 144px);
+  background-color: #cbf3f0;
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4.2rem;
-  font-family: "Golos Text", sans-serif;
-  font-weight: 400;
+  position: relative;
 }
-.container .time {
-  width: 10rem;
-  height: 10rem;
-  background-color: #33ffd8;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2ec4b6;
+  padding: 1.7rem;
+  border-radius: 10px;
+}
+.form label {
+  font-size: 2.2rem;
+  color: white;
+}
+.form .name {
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0.9rem;
+  margin: 0.4rem 0;
+  border-radius: 10px;
+}
+.form .submit-button {
+  font-size: 2rem;
+  padding: 0.6rem 1.5rem;
+  margin-top: 0.5rem;
+  background-color: #4cc9f0;
+  border: 2px solid #2ec4b6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.form .submit-button:hover {
+  background-color: transparent;
+  border: 2px solid #4cc9f0;
+}
+
+.main-screen {
+  display: none;
+}
+.main-screen .greeting {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-screen .clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-screen .clock .time {
+  font-size: 3rem;
+  width: 100px;
+  height: 100px;
+  background-color: #2ec4b6;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.container span {
+.main-screen .clock span {
   font-size: 4rem;
   margin: 0 1rem;
-  color: white;
+  color: #4cc9f0;
 }
-.container .hours::before {
+.main-screen .clock .hours::before {
   position: absolute;
   content: "Hours";
-  font-size: 2rem;
-  color: white;
+  font-size: 1.8rem;
+  text-transform: uppercase;
   top: -21%;
   left: 50%;
   transform: translateX(-50%);
 }
-.container .minutes::before {
+.main-screen .clock .minutes::before {
   position: absolute;
-  content: "Minutes";
-  font-size: 2rem;
-  color: white;
+  content: "minutes";
+  font-size: 1.8rem;
+  text-transform: uppercase;
   top: -21%;
   left: 50%;
   transform: translateX(-50%);
 }
-.container .seconds::before {
+.main-screen .clock .seconds::before {
   position: absolute;
-  content: "Seconds";
-  font-size: 2rem;
-  color: white;
+  content: "seconds";
+  font-size: 1.8rem;
+  text-transform: uppercase;
   top: -21%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (max-width: 500px) {
+  .form {
+    width: 80%;
+  }
+  .name {
+    width: 100%;
+    margin: 0;
+  }
+  .greeting {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .time {
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+  }
+  span {
+    font-size: 3rem;
+  }
+  .hours::before {
+    position: absolute;
+    content: "Hours";
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    top: -21%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=style.css.map */
